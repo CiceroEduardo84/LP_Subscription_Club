@@ -1,0 +1,17 @@
+.desktop-only {
+  display: none;
+  @media (min-width: 80em) {
+    display: flex;
+  }
+}
+
+.mobile {
+  display: none;
+  @media (max-width: 80em) {
+    display: flex;
+  }
+}
+
+.flex {
+  display: flex;
+}
