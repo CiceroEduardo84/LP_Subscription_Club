@@ -1,0 +1,70 @@
+.text-appear {
+  & div {
+    position: relative;
+
+    & img {
+      position: absolute;
+
+      &[src*="spellbook"] {
+        width: 2.5rem;
+        top: 1.75rem;
+        right: 3.5rem;
+        rotate: 20deg;
+      }
+
+      &[src*="planchette"] {
+        width: 2rem;
+        bottom: 3rem;
+        left: 1rem;
+        rotate: -50deg;
+      }
+
+      &[src*="crys"] {
+        width: 2.5rem;
+        bottom: 3rem;
+        right: 1rem;
+        rotate: 15deg;
+      }
+    }
+
+    /* & img:nth-child(1),
+    & img:nth-child(3) {
+      height: 2.5rem;
+      width: 2.5rem;
+      transform: rotate(15deg);
+      position: absolute;
+    }
+
+    & img:nth-child(1) {
+      top: 0;
+    }
+
+    & img:nth-child(2) {
+      height: 2rem;
+      width: 2rem;
+      transform: rotate(-30deg);
+      position: absolute;
+    } */
+
+    & h2 {
+      padding-block: 5rem;
+      color: var(--text-body);
+      font: var(--body-md);
+      text-align: center;
+
+      & span > strong {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 20em) {
+  .textappear {
+    & div {
+      h2 {
+        font: var(--body-sm);
+      }
+    }
+  }
+}
