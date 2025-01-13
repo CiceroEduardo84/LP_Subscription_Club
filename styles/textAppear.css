@@ -1,4 +1,4 @@
-.text-appear {
+.textAppear {
   & div {
     position: relative;
 
@@ -26,25 +26,6 @@
         rotate: 15deg;
       }
     }
-
-    /* & img:nth-child(1),
-    & img:nth-child(3) {
-      height: 2.5rem;
-      width: 2.5rem;
-      transform: rotate(15deg);
-      position: absolute;
-    }
-
-    & img:nth-child(1) {
-      top: 0;
-    }
-
-    & img:nth-child(2) {
-      height: 2rem;
-      width: 2rem;
-      transform: rotate(-30deg);
-      position: absolute;
-    } */
 
     & h2 {
       padding-block: 5rem;

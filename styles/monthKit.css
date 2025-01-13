@@ -1,0 +1,132 @@
+.monthKit {
+  height: 631px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 6.5rem;
+
+  & header {
+    & div {
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 0.75rem;
+
+      h2 {
+        font: var(--title-3sm);
+      }
+
+      img {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+
+    & p {
+      text-align: center;
+    }
+  }
+
+  .monthBook {
+    height: 320px;
+    position: relative;
+
+    & img,
+    & span {
+      position: absolute;
+    }
+
+    & img {
+      &[src*="book01"] {
+        height: 13rem;
+        width: 10rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-65%, -50%);
+        z-index: 2;
+      }
+
+      &[src*="bookmark-purple"] {
+        height: 11.25rem;
+        width: 3.75rem;
+        rotate: 22deg;
+        top: 4.5rem;
+        right: 1rem;
+        z-index: 0;
+      }
+
+      &[src*="bookmark-yellow"] {
+        height: 11.25rem;
+        width: 3.75rem;
+        rotate: 11deg;
+        top: 1.8rem;
+        right: 3rem;
+        z-index: 1;
+      }
+
+      &[src*="pin"] {
+        height: 5.4rem;
+        width: 4.6rem;
+        rotate: -7.5deg;
+        left: -0.25rem;
+        bottom: 1.4rem;
+        z-index: 1;
+      }
+
+      &[src*="vector-book"] {
+        height: 0.6rem;
+        width: 3.8rem;
+        top: 3rem;
+        left: 0rem;
+        z-index: 3;
+      }
+
+      &[src*="vector-pin"] {
+        height: 2.6rem;
+        width: 2.25rem;
+        bottom: 5.75rem;
+        left: -1.25rem;
+        z-index: 3;
+      }
+
+      &[src*="vector_book_mark"] {
+        height: 3.12rem;
+        width: 3rem;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 3;
+      }
+    }
+
+    & span {
+      font: var(--tag);
+      z-index: 4;
+
+      &:nth-child(8) {
+        top: 1.5rem;
+        left: -1.5rem;
+      }
+
+      &:nth-child(9) {
+        left: -1.75rem;
+        bottom: 45%;
+      }
+
+      &:nth-child(10) {
+        right: 1rem;
+        bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 20em) {
+  .monthKit {
+    & header {
+      & div {
+        h2 {
+          font: var(--title-xs);
+        }
+      }
+    }
+  }
+}
