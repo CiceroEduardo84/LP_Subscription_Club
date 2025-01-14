@@ -32,6 +32,17 @@
   }
 }
 
+.buttonSignature {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  
+  font: var(--button);
+  color: var(--text-title);
+
+  background-color: var(--blue-dark);
+}
+
 @media (max-width: 20em) {
   .button {
     font: var(--button-sm);
