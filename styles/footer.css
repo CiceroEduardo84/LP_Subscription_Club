@@ -42,8 +42,11 @@ footer {
 
   .even-columns {
     justify-content: space-between;
+    gap: 1.25rem;
 
     ul {
+      width: 50%;
+
       & .title {
         margin-bottom: 1.25rem;
         font: var(--title-xs);
