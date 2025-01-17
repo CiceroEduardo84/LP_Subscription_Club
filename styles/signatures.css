@@ -78,6 +78,7 @@ section.signatures {
 
       &:hover {
         background-color: var(--shape-hover);
+        filter: drop-shadow(0 0 4rem var(--blue-baseblur));
       }
     }
 
