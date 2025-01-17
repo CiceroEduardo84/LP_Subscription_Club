@@ -1,0 +1,37 @@
+div.blur {
+  position: relative;
+
+  & [class*="ellipse"] {
+    position: absolute;
+    filter: blur(140px);
+    background-color: var(--pink-low);
+  }
+
+  & .ellipse1 {
+    left: 100%;
+    bottom: 50%;
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+
+  & .ellipse2 {
+    top: -12rem;
+    left: -12rem;
+    height: 9.5rem;
+    width: 9.5rem;
+  }
+
+  & .ellipse3 {
+    top: 0;
+    left: 0;
+    height: 14rem;
+    width: 14rem;
+  }
+
+  & .ellipse4 {
+    top: -15.5rem;
+    right: -10rem;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
