@@ -7,9 +7,10 @@
 
   & header {
     & div {
-      flex-direction: row;
       justify-content: center;
+      align-items: center;
       column-gap: 0.75rem;
+      margin-bottom: 0.5rem;
 
       h2 {
         font: var(--title-3sm);
@@ -18,6 +19,7 @@
       img {
         height: 1.25rem;
         width: 1.25rem;
+        filter: drop-shadow(0 0 0.75rem var(--pink-base));
       }
     }
 
@@ -27,11 +29,12 @@
   }
 
   .monthBook {
-    height: 320px;
+    height: 58vh;
     position: relative;
 
     & img,
-    & span {
+    & span,
+    &::before {
       position: absolute;
     }
 
@@ -115,6 +118,15 @@
         right: 1rem;
         bottom: 1rem;
       }
+    }
+
+    &::before{
+      content: " ";
+      width: 17rem;
+      height: 17rem;
+      background-color: var(--pink-low);
+      filter: blur(110px);
+      z-index: -1;
     }
   }
 }
