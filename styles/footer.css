@@ -30,11 +30,21 @@ footer {
       justify-content: space-between;
 
       & svg {
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0.5rem;
 
         path {
           fill: var(--blue-base);
+        }
+
+        &:hover{
+          border-radius: 100%;
+          background-color: var(--shape-stroke);
+
+          path{
+            fill: var(--text-body);
+          }
         }
       }
     }
@@ -56,6 +66,10 @@ footer {
         a {
           font: var(--link);
           color: var(--blue-base);
+
+          &:hover {
+            color: var(--text-body);
+          }
         }
       }
     }
