@@ -1,42 +1,66 @@
 .textAppear {
-  & div {
-    position: relative;
+  position: relative;
 
-    & img {
-      position: absolute;
+  & img {
+    position: absolute;
 
-      &[src*="spellbook"] {
-        width: 2.5rem;
-        top: 1.75rem;
-        right: 3.5rem;
-        rotate: 20deg;
-      }
-
-      &[src*="planchette"] {
-        width: 2rem;
-        bottom: 3rem;
-        left: 1rem;
-        rotate: -50deg;
-      }
-
-      &[src*="crys"] {
-        width: 2.5rem;
-        bottom: 3rem;
-        right: 1rem;
-        rotate: 15deg;
-      }
+    &[src*="spellbook"] {
+      width: 2.5rem;
+      top: 1.75rem;
+      right: 3.5rem;
+      rotate: 20deg;
     }
 
-    & h2 {
-      padding-block: 5rem;
-      color: var(--text-body);
-      font: var(--body-md);
-      text-align: center;
-
-      & span > strong {
-        font-weight: 400;
-      }
+    &[src*="planchette"] {
+      width: 2rem;
+      bottom: 3rem;
+      left: 1rem;
+      rotate: -50deg;
     }
+
+    &[src*="crys"] {
+      width: 2.5rem;
+      bottom: 3rem;
+      right: 1rem;
+      rotate: 15deg;
+    }
+  }
+
+  & h2 {
+    padding-block: 5rem;
+    color: var(--text-body);
+    font: var(--body-md);
+    text-align: center;
+
+    & span > strong {
+      font-weight: 400;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 350px;
+    border-radius: 50%;
+    right: -20rem;
+    bottom: 16rem;
+    filter: blur(200px);
+    background-color: var(--pink-low);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 20%;
+    transform: translate(-20%);
+    bottom: 5rem;
+    filter: blur(90px);
+    background-color: var(--pink-low);
+    z-index: -1;
   }
 }
 

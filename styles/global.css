@@ -55,12 +55,16 @@
   --tag: 500 0.625rem/1.5 var(--ff-raleway);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   max-width: 100%;
   background-color: var(--shape-background);
   color: var(--text-body);
   font: var(--body-lg);
-  overflow-x: hidden;
 }
 
 .container {
