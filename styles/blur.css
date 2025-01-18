@@ -1,5 +1,6 @@
 div.blur {
   position: relative;
+  overflow: hidden;
 
   & [class*="ellipse"] {
     position: absolute;
