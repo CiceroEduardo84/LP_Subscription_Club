@@ -3,6 +3,7 @@
 
   & img {
     position: absolute;
+    transition: scale 300ms linear, transform 300ms linear;
 
     &[src*="spellbook"] {
       width: 2.5rem;
@@ -23,6 +24,11 @@
       bottom: 3rem;
       right: 1rem;
       rotate: 15deg;
+    }
+
+    &:hover {
+      transform: rotate(10deg);
+      scale: 1.1;
     }
   }
 
