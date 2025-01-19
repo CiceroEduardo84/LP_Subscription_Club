@@ -33,16 +33,17 @@ footer {
         height: 2.5rem;
         width: 2.5rem;
         padding: 0.5rem;
+        border-radius: 100%;
+        transition: background-color 300ms linear;
 
         path {
           fill: var(--blue-base);
         }
 
-        &:hover{
-          border-radius: 100%;
+        &:hover {
           background-color: var(--shape-stroke);
 
-          path{
+          path {
             fill: var(--text-body);
           }
         }
