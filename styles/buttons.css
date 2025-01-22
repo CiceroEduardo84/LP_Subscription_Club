@@ -1,4 +1,5 @@
-.button, .buttonSignature{
+.button,
+.buttonSignature {
   position: relative;
   border: none;
   border-radius: 0.5rem;
@@ -52,5 +53,11 @@
 @media (max-width: 20em) {
   .button {
     font: var(--button-sm);
+  }
+}
+
+@media (min-width: 80em) {
+  .button {
+    font-weight: 600;
   }
 }
