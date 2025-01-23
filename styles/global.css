@@ -113,6 +113,7 @@ ul[role="list"] {
 
   h1 {
     font: var(--title-lg);
+    line-height: normal;
   }
 
   p {

@@ -76,19 +76,24 @@
 
 @media (min-width: 80em) {
   .textAppear {
-    margin-block: 8rem 14rem;
+    max-width: 1100px;
+    margin: 8rem auto 14rem;
 
     & img {
-      opacity: 0;
       transform: scale(0);
-      transition: opacity 1s ease, transform 1s linear, scale 300ms linear,
-        rotate 300ms linear;
 
       &[src*="spellbook"] {
         width: 5.5rem;
         top: 0rem;
         right: 50%;
         translate: 50%;
+        transition: transform 1s 0.1s linear, scale 300ms linear,
+          rotate 300ms linear;
+
+        &:hover {
+          rotate: 30deg;
+          scale: 1.1;
+        }
       }
 
       &[src*="planchette"] {
@@ -96,6 +101,13 @@
         bottom: 0rem;
         left: 1rem;
         rotate: 99deg;
+        transition: transform 1s 0.9s linear, scale 300ms linear,
+          rotate 300ms linear;
+
+        &:hover {
+          rotate: 109deg;
+          scale: 1.1;
+        }
       }
 
       &[src*="crys"] {
@@ -103,10 +115,19 @@
         bottom: 0rem;
         right: 1rem;
         rotate: -15deg;
+        transition: transform 1s 1.55s linear, scale 300ms linear,
+          rotate 300ms linear;
+
+        &:hover {
+          rotate: -25deg;
+          scale: 1.1;
+        }
       }
     }
 
     h2 {
+      width: 100%;
+
       span {
         opacity: 0.5;
         line-height: 200%;
@@ -120,33 +141,6 @@
     &:hover img {
       opacity: 1;
       transform: scale(1);
-
-      &[src*="spellbook"] {
-        transition-delay: 0.1s;
-
-        &:hover {
-          rotate: 30deg;
-        }
-      }
-
-      &[src*="planchette"] {
-        transition-delay: 0.9s;
-        &:hover {
-          rotate: 109deg;
-        }
-      }
-
-      &[src*="crys"] {
-        transition-delay: 1.55s;
-        &:hover {
-          rotate: -25deg;
-        }
-      }
-
-      &:hover {
-        scale: 1.1;
-        transition-delay: 0.2s;
-      }
     }
 
     &:not(:hover) img {
