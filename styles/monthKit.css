@@ -53,7 +53,7 @@
       &[src*="bookmark-purple"] {
         height: 11.25rem;
         width: 3.75rem;
-        rotate: 22deg;
+        transform: rotate(22deg);
         top: 4.5rem;
         right: 1rem;
         z-index: 0;
@@ -62,7 +62,7 @@
       &[src*="bookmark-yellow"] {
         height: 11.25rem;
         width: 3.75rem;
-        rotate: 11deg;
+        transform: rotate(11deg);
         top: 1.8rem;
         right: 3rem;
         z-index: 1;
@@ -71,7 +71,7 @@
       &[src*="pin"] {
         height: 5.4rem;
         width: 4.6rem;
-        rotate: -7.5deg;
+        transform: rotate(-7.5deg);
         left: -0.25rem;
         bottom: 1.4rem;
         z-index: 1;
@@ -146,6 +146,140 @@
 
     .monthBook {
       width: 100%;
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  .monthKit {
+    height: 1586px;
+    gap: 5rem;
+    margin-block: 0;
+    padding-block: 14rem;
+
+    & header {
+      & div {
+        column-gap: 1rem;
+        margin-bottom: 0.25rem;
+
+        h2 {
+          font: var(--title-sm);
+        }
+
+        img {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+
+      & p {
+        font: var(--body-md);
+      }
+    }
+
+    .monthBook {
+      height: 920px;
+      width: 100%;
+
+      & img {
+        &[src*="book01"] {
+          height: 38.5rem;
+          width: 29rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+        }
+
+        &[src*="bookmark-purple"] {
+          height: 33.5rem;
+          width: 10.75rem;
+          top: 12rem;
+          right: 0rem;
+        }
+
+        &[src*="bookmark-yellow"] {
+          height: 33.5rem;
+          width: 10.75rem;
+          top: 3rem;
+          right: 5rem;
+        }
+
+        &[src*="pin"] {
+          height: 16rem;
+          width: 14rem;
+          left: 4rem;
+          bottom: 4rem;
+        }
+
+        &[src*="vector-book"] {
+          height: 1.8rem;
+          width: 10rem;
+          top: 8rem;
+          left: 5rem;
+        }
+
+        &[src*="vector-pin"] {
+          height: 8rem;
+          width: 6.25rem;
+          bottom: 16rem;
+          left: 1.25rem;
+          z-index: 3;
+        }
+
+        &[src*="vector_book_mark"] {
+          height: 9.5rem;
+          width: 9rem;
+          bottom: 5rem;
+          right: 3rem;
+        }
+      }
+
+      & span {
+        font: var(--body-md);
+
+        &:nth-child(8) {
+          top: 5rem;
+          left: 2rem;
+        }
+
+        &:nth-child(9) {
+          left: -1.5rem;
+        }
+
+        &:nth-child(10) {
+          right: 5rem;
+          bottom: 3rem;
+        }
+      }
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        filter: blur(300px);
+      }
+
+      &:hover {
+        & img {
+          &[src*="bookmark-purple"] {
+          }
+
+          &[src*="bookmark-yellow"] {
+          }
+
+          &[src*="pin"] {
+          }
+
+          &[src*="vector-book"] {
+          }
+
+          &[src*="vector-pin"] {
+          }
+
+          &[src*="vector_book_mark"] {
+          }
+        }
+      }
     }
   }
 }
