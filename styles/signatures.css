@@ -12,7 +12,7 @@ section.signatures {
 
     overflow: auto hidden;
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
 
@@ -123,6 +123,139 @@ section.signatures {
     & h2 {
       text-align: center;
       font: var(--title-xs);
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  section.signatures {
+    height: 1234px;
+    padding-block: 194px 300px;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      border-radius: 100%;
+      filter: blur(568px);
+      background-color: var(--shape-base);
+      z-index: -1;
+    }
+
+    & h2 {
+      font: var(--title-sm);
+      margin-bottom: 3.5rem;
+    }
+
+    & .boxCards {
+      position: relative;
+      height: 620px;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      z-index: 1;
+      overflow: hidden;
+
+      & .card {
+        position: relative;
+        height: 26rem;
+        width: 18rem;
+        transition: transform 0.8s ease;
+
+
+        .figure {
+          position: absolute;
+          svg{
+            transition: rotate 0.8s ease;
+          }
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+          z-index: 2;
+        }
+      }
+
+      & .card:nth-child(1) {
+        rotate: -8deg;
+
+        & .figure {
+          top: -6%;
+          left: -10%;
+          rotate: -50deg;
+
+          & svg {
+            rotate: -50deg;
+          }
+
+          & svg:nth-child(1) {
+            height: 13px;
+            width: 13px;
+          }
+
+          & svg:nth-child(2) {
+            height: 26px;
+            width: 26px;
+          }
+        }
+      }
+
+      & .card:nth-child(2) {
+        bottom: 10%;
+        z-index: 1;
+
+        header {
+          & .plan {
+            color: var(--pink-light);
+          }
+        }
+
+        & .figure {
+          top: 0;
+          transform: translateY(-90%);
+
+          & svg {
+            height: 45px;
+            width: 50px;
+          }
+        }
+      }
+
+      & .card:nth-child(3) {
+        rotate: 8deg;
+
+        & .figure {
+          bottom: -8%;
+          right: -10%;
+          rotate: -10deg;
+
+          & svg {
+            rotate: -50deg;
+          }
+
+          & svg:nth-child(1) {
+            height: 13px;
+            width: 13px;
+          }
+
+          & svg:nth-child(2) {
+            height: 26px;
+            width: 26px;
+          }
+        }
+      }
+
+      & .card:nth-child(1),
+      & .card:nth-child(3) {
+        &:hover {
+          .figure {
+            svg {
+              rotate: 10deg;
+            }
+          }
+        }
+      }
     }
   }
 }
