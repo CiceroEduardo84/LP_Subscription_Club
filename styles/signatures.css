@@ -163,10 +163,9 @@ section.signatures {
         width: 18rem;
         transition: transform 0.8s ease;
 
-
         .figure {
           position: absolute;
-          svg{
+          svg {
             transition: rotate 0.8s ease;
           }
         }
@@ -175,6 +174,11 @@ section.signatures {
           transform: translateY(-10px);
           z-index: 2;
         }
+      }
+
+      &:has(.card:hover) .card:not(:hover) {
+        background-color: var(--shape-base);
+        filter: none;
       }
 
       & .card:nth-child(1) {
@@ -204,6 +208,13 @@ section.signatures {
       & .card:nth-child(2) {
         bottom: 10%;
         z-index: 1;
+        background-color: var(--shape-hover);
+        filter: drop-shadow(0 0 4rem var(--blue-baseblur));
+
+        &:has(.card:hover) :not(:hover) {
+          background-color: var(--shape-base);
+          filter: none;
+        }
 
         header {
           & .plan {
