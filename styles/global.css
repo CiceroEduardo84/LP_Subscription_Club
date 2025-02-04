@@ -12,12 +12,13 @@
 :root {
   --pink-light: #c59dd2;
   --pink-base: #9547a5;
+  --pink-baseblur: rgba(149, 71, 165, 30%);
   --pink-dark: #7d298a;
   --pink-low: #3f0f41;
 
   --blue-light: #73b6d2;
   --blue-base: #358bb9;
-  --blue-baseblur: rgba(53, 139, 185, 10%);
+  --blue-baseblur: rgba(53, 139, 185, 30%);
   --blue-mid: #2374a4;
   --blue-dark: #144a72;
   --blue-low: #08233c;
@@ -31,6 +32,8 @@
   --text-body: #e2e7e9;
   --text-body-opaque: #e2e7e950;
   --text-label: #bac6c9;
+
+  --height-blur: 4rem;
 
   --ff-raleway: "Raleway", serif;
 
@@ -107,6 +110,10 @@ ul[role="list"] {
 }
 
 @media (min-width: 80em) {
+  :root {
+    --height-blur: 2rem;
+  }
+
   .container {
     max-width: calc(100% - 15rem);
   }

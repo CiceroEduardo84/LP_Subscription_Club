@@ -78,7 +78,6 @@ section.signatures {
 
       &:hover {
         background-color: var(--shape-hover);
-        filter: drop-shadow(0 0 4rem var(--blue-baseblur));
       }
     }
 
@@ -129,16 +128,18 @@ section.signatures {
 
 @media (min-width: 80em) {
   section.signatures {
+    position: relative;
     height: 1234px;
     padding-block: 194px 300px;
 
     &::before {
       content: " ";
       position: absolute;
-      width: 100%;
-      height: inherit;
+      width: 80%;
+      height: 80%;
+      top: 0;
       border-radius: 100%;
-      filter: blur(568px);
+      filter: blur(168px);
       background-color: var(--shape-base);
       z-index: -1;
     }
@@ -150,7 +151,7 @@ section.signatures {
 
     & .boxCards {
       position: relative;
-      height: 620px;
+      height: 100%;
       align-items: center;
       justify-content: center;
       gap: 0;
@@ -158,10 +159,10 @@ section.signatures {
       overflow: hidden;
 
       & .card {
-        position: relative;
+        position: absolute;
         height: 26rem;
         width: 18rem;
-        transition: transform 0.8s ease;
+        transition: transform 1s ease-in-out, scale 400ms ease;
 
         .figure {
           position: absolute;
@@ -169,20 +170,10 @@ section.signatures {
             transition: rotate 0.8s ease;
           }
         }
-
-        &:hover {
-          transform: translateY(-10px);
-          z-index: 2;
-        }
-      }
-
-      &:has(.card:hover) .card:not(:hover) {
-        background-color: var(--shape-base);
-        filter: none;
       }
 
       & .card:nth-child(1) {
-        rotate: -8deg;
+        z-index: 1;
 
         & .figure {
           top: -6%;
@@ -206,10 +197,9 @@ section.signatures {
       }
 
       & .card:nth-child(2) {
-        bottom: 10%;
-        z-index: 1;
         background-color: var(--shape-hover);
-        filter: drop-shadow(0 0 4rem var(--blue-baseblur));
+        filter: drop-shadow(0 0 var(--height-blur) var(--pink-baseblur));
+        z-index: 3;
 
         &:has(.card:hover) :not(:hover) {
           background-color: var(--shape-base);
@@ -234,7 +224,7 @@ section.signatures {
       }
 
       & .card:nth-child(3) {
-        rotate: 8deg;
+        z-index: 2;
 
         & .figure {
           bottom: -8%;
@@ -265,6 +255,38 @@ section.signatures {
               rotate: 10deg;
             }
           }
+        }
+      }
+
+      &:hover {
+        & .card {
+          transition: transform 1s ease-in-out, scale 400ms ease;
+
+          &:hover {
+            filter: drop-shadow(0 0 var(--height-blur) var(--blue-baseblur));
+            scale: 1.01;
+            z-index: 4;
+          }
+        }
+
+        &:has(.card:hover) .card:not(:hover) {
+          background-color: var(--shape-base);
+          filter: none;
+        }
+
+        & .card:nth-child(1) {
+          transform: rotate(-8deg) translateX(-100%);
+        }
+
+        & .card:nth-child(2) {
+          transform: translateY(-10%);
+          &:hover {
+            filter: drop-shadow(0 0 var(--height-blur) var(--pink-baseblur));
+          }
+        }
+
+        & .card:nth-child(3) {
+          transform: rotate(8deg) translateX(100%);
         }
       }
     }
