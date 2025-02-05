@@ -53,51 +53,42 @@
       &[src*="bookmark-purple"] {
         height: 11.25rem;
         width: 3.75rem;
-        transform: rotate(22deg);
-        top: 4.5rem;
-        right: 1rem;
+        transform: rotate(22deg) translate(14.5rem, -1.5rem);
         z-index: 0;
       }
 
       &[src*="bookmark-yellow"] {
         height: 11.25rem;
         width: 3.75rem;
-        transform: rotate(11deg);
-        top: 1.8rem;
-        right: 3rem;
+        transform: rotate(11deg) translate(12rem, -0.4rem);
         z-index: 1;
       }
 
       &[src*="pin"] {
         height: 5.4rem;
         width: 4.6rem;
-        transform: rotate(-7.5deg);
-        left: -0.25rem;
-        bottom: 1.4rem;
+        transform: rotate(-7.5deg) translate(-1.5rem, 13rem);
         z-index: 1;
       }
 
       &[src*="vector-book"] {
         height: 0.6rem;
         width: 3.8rem;
-        top: 3rem;
-        left: 0rem;
+        transform: translate(0, 3rem);
         z-index: 3;
       }
 
       &[src*="vector-pin"] {
         height: 2.6rem;
         width: 2.25rem;
-        bottom: 5.75rem;
-        left: -1.25rem;
+        transform: translate(-1rem, 11.5rem);
         z-index: 3;
       }
 
       &[src*="vector_book_mark"] {
         height: 3.12rem;
         width: 3rem;
-        bottom: 2rem;
-        right: 2rem;
+        transform: translate(14rem, 14rem);
         z-index: 3;
       }
     }
@@ -107,18 +98,15 @@
       z-index: 4;
 
       &:nth-child(8) {
-        top: 1.5rem;
-        left: -1.5rem;
+        transform: translate(-1.5rem, 1.5rem);
       }
 
       &:nth-child(9) {
-        left: -1.75rem;
-        bottom: 45%;
+        transform: translate(-1.75rem, 10rem);
       }
 
       &:nth-child(10) {
-        right: 1rem;
-        bottom: 1rem;
+        transform: translate(11rem, 17.5rem);
       }
     }
 
@@ -146,6 +134,30 @@
 
     .monthBook {
       width: 100%;
+
+      & img {
+        &[src*="book01"] {
+          transform: translate(-50%, -50%);
+        }
+
+        &[src*="bookmark-purple"] {
+          transform: rotate(20deg) translate(13rem, -0.5rem);
+        }
+
+        &[src*="bookmark-yellow"] {
+          transform: rotate(11deg) translate(10.2rem, -0.4rem);
+        }
+
+        &[src*="vector_book_mark"] {
+          transform: translate(13rem, 14rem);
+        }
+      }
+
+      & span {
+        &:nth-child(10) {
+          transform: translate(9.5rem, 17.5rem);
+        }
+      }
     }
   }
 }
@@ -181,6 +193,11 @@
       height: 920px;
       width: 100%;
 
+      & img,
+      & span {
+        transition: transform 1s ease-in-out;
+      }
+
       & img {
         &[src*="book01"] {
           height: 38.5rem;
@@ -194,44 +211,38 @@
         &[src*="bookmark-purple"] {
           height: 33.5rem;
           width: 10.75rem;
-          top: 12rem;
-          right: 0rem;
+          transform: translate(25vw, 30vh);
         }
 
         &[src*="bookmark-yellow"] {
           height: 33.5rem;
           width: 10.75rem;
-          top: 3rem;
-          right: 5rem;
+          transform: translate(25vw, 30vh);
         }
 
         &[src*="pin"] {
           height: 16rem;
           width: 14rem;
-          left: 4rem;
-          bottom: 4rem;
+          transform: translate(25vw, 30vh);
         }
 
         &[src*="vector-book"] {
           height: 1.8rem;
           width: 10rem;
-          top: 8rem;
-          left: 5rem;
+          transform: translate(25vw, 30vh);
         }
 
         &[src*="vector-pin"] {
           height: 8rem;
           width: 6.25rem;
-          bottom: 16rem;
-          left: 1.25rem;
           z-index: 3;
+          transform: translate(25vw, 30vh);
         }
 
         &[src*="vector_book_mark"] {
           height: 9.5rem;
           width: 9rem;
-          bottom: 5rem;
-          right: 3rem;
+          transform: translate(25vw, 30vh);
         }
       }
 
@@ -239,17 +250,15 @@
         font: var(--body-md);
 
         &:nth-child(8) {
-          top: 5rem;
-          left: 2rem;
+          transform: translate(25vw, 30vh);
         }
 
         &:nth-child(9) {
-          left: -1.5rem;
+          transform: translate(25vw, 30vh);
         }
 
         &:nth-child(10) {
-          right: 5rem;
-          bottom: 3rem;
+          transform: translate(25vw, 30vh);
         }
       }
 
@@ -260,23 +269,51 @@
       }
 
       &:hover {
+        & img,
+        & span {
+          transition: transform 1s ease-in-out;
+        }
+
         & img {
           &[src*="bookmark-purple"] {
+            transform: rotate(22deg) translate(45.2rem, -4rem);
           }
 
           &[src*="bookmark-yellow"] {
+            transform: rotate(12deg) translate(38rem, -4rem);
           }
 
           &[src*="pin"] {
+            transform: rotate(-7.5deg) translate(-1rem, 38rem);
           }
 
           &[src*="vector-book"] {
+            transform: translate(5rem, 8rem);
           }
 
           &[src*="vector-pin"] {
+            height: 8rem;
+            width: 6.25rem;
+            z-index: 3;
+            transform: translate(1.25rem, 32.5rem);
           }
 
           &[src*="vector_book_mark"] {
+            transform: translate(42rem, 44rem);
+          }
+        }
+
+        & span {
+          &:nth-child(8) {
+            transform: translate(1rem, 5rem);
+          }
+
+          &:nth-child(9) {
+            transform: translate(-0.5rem, 30rem);
+          }
+
+          &:nth-child(10) {
+            transform: translate(38rem, 55rem);
           }
         }
       }
